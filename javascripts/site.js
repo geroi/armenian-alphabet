@@ -9,7 +9,8 @@ window.addEventListener("load", ()=>{
 
     document.querySelectorAll('.input').forEach((input)=>{
         input.addEventListener('input', (event)=>{
-            if (event.target.value !== '' && event.target.validity.valid) {
+            const validationRegex = new RegExp(event.target.pattern, 'i')
+            if (event.target.value !== '' && validationRegex.test(event.target.value)) {
                 event.target.classList.add('is-valid')
             } else {
                 event.target.classList.remove('is-valid')
