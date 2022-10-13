@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/javascripts/form.js"></script>
+  <script src="https://captcha-api.yandex.ru/captcha.js" defer></script>
+
+
+  <script src="/javascripts/site.js"></script>
+  <link href="/stylesheets/site.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-secondary mb-3">
+  <div class="container-fluid">
+    <span class="navbar-brand text-white">Армянский алфавит</span>
+    <button class="navbar-toggler collapsed" style="color: white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list text-white" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="./" class="nav-link text-white">Главная</a>
+        </li>
+          <li class="nav-item">
+            <a href="/lesson_1.html" class="nav-link text-white">Урок 1</a>
+          </li>
+          <li class="nav-item">
+            <a href="/lesson_2.html" class="nav-link text-white">Урок 2</a>
+          </li>
+          <li class="nav-item">
+            <a href="/lesson_3.html" class="nav-link text-white">Урок 3</a>
+          </li>
+          <li class="nav-item">
+            <a href="/lesson_4.html" class="nav-link text-white">Урок 4</a>
+          </li>
+          <li class="nav-item">
+            <a href="/lesson_5.html" class="nav-link text-white">Урок 5</a>
+          </li>
+          <li class="nav-item">
+            <a href="/lesson_6.html" class="nav-link text-white">Урок 6</a>
+          </li>
+          <li class="nav-item">
+            <a href="/lesson_7.html" class="nav-link text-white">Урок 7</a>
+          </li>
+        <li class="nav-item">
+          <a href="/feedback.html" class="nav-link text-white">Обратная связь</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container p-1">
+  <form id="feedback" action="https://functions.yandexcloud.net/d4encnt3km0bijsst062" method="post">
+    <label for="from" class="mb-1">E-mail</label>
+    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="from" name="from" class="form-control mb-1" maxlength="1000" required/>
+    <label for="message" class="mb-1">Сообщение</label>
+    <textarea rows="5" id="message" name="message" class="form-control mb-1" maxlength="1000" required></textarea>
+    <div style="height: 100px" id="captcha-container" class="smart-captcha my-1" data-sitekey="G3tXoia8tyWCvsFi6UnPoYMFqHRI0amacwHdhNsE"></div>
+    <div id="captcha-warning" class="text-danger d-none"><small>Пожалуйста, пройдите капчу</small></div>
+    <input type="submit" class="btn btn-outline-primary mb-1" value='Отправить'/>
+  </form>
+</div>
+
+
+<div class="container">
+  <footer class="py-1 my-1">
+    <p class="text-center text-muted border-top py-3">© 2022 Alex Kashmatov</p>
+  </footer>
+</div>
+
+</body>
+</html>
